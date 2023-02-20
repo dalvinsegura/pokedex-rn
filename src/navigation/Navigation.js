@@ -6,9 +6,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 import AccountScreen from "../screens/Account.screen";
-import PokedexScreen from "../screens/Pokedex.screen";
 import FavoriteScreen from "../screens/Favorite.screen";
 import PokemonNavigation from "./Pokemon.navigation";
+import FavoriteNavigation from "./FavoriteNavigation";
 
 const Tab = createBottomTabNavigator();
 
@@ -17,7 +17,7 @@ export default function Navigation() {
     <Tab.Navigator initialRouteName="PokemonNavigation">
       <Tab.Screen
         name="Favorite"
-        component={FavoriteScreen}
+        component={FavoriteNavigation}
         options={{
           title: "Favoritos",
           tabBarLabel: "Favoritos",
